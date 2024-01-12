@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { AccData } from './acc-data.js';
 function Accordion() {
   const [ActiveAccordion, setActiveAccordion] = useState(0);
-
+  const index = 0;
 
   function handleClick(clickedIndex) {
-    console.log(clickedIndex)
+   
     setActiveAccordion(clickedIndex);
   }
   return (
@@ -15,8 +15,12 @@ function Accordion() {
       {
         AccData.map((item, index) => (
           <>
-            <AccordionTitle handleClick={handleClick} clickedIndex={index}>
-              {item.question}
+            <AccordionTitle
+            className = { ActiveAccordion == index ? "btn-primary" : "btn-outline-primary" }  
+            handleClick={handleClick} clickedIndex={index}>
+            {item.question}
+
+            <span className='icon'>{ ActiveAccordion == index ? "-" : "+" }</span>
             </AccordionTitle>
             {ActiveAccordion == index &&
               <AccordionBody AccDetail={item.answer} />

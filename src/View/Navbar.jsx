@@ -10,15 +10,15 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarsExample02">
             <ul className="navbar-nav mr-auto">
            
-                <Link exact  to="/">
-                    Home
+                <Link className="m-1" exact  to="/">
+                    Home 
                 </Link>
 
-                <Link  to="/tab">
-                    Tab
+                <Link className="m-1" to="/tab">
+                    Tab 
                 </Link>
 
-                <Link  to="/accordiaon">
+                <Link className="m-1"  to="/accordiaon">
                     Accordiaon
                 </Link>
 
