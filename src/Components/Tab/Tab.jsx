@@ -1,7 +1,6 @@
-import TabButton from '../Components/TabButton';
+import TabButton from './TabButton.jsx';
 import { useState } from 'react';
-import { TabDetail } from './data.js';
-
+import { TabDetail } from '../data.js';
 function Tab() {
   const [TabData, setTabData] = useState('components');
 
@@ -10,6 +9,7 @@ function Tab() {
   }
   return (
     <>
+
       <TabButton handleClick={handleClick}>Components</TabButton>
       <TabButton handleClick={handleClick}>JSX</TabButton>
       <TabButton handleClick={handleClick}>Props</TabButton>
