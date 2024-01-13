@@ -2,6 +2,7 @@
   "name": "stackblitz-starters-si931b",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://VijayDhanvai.github.io/React-Tab",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "@types/react": "18.2.47",
@@ -15,7 +16,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build" 
+  
   },
   "devDependencies": {
     "react-scripts": "latest",
