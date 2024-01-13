@@ -16,11 +16,11 @@ function Accordion() {
         AccData.map((item, index) => (
           <>
             <AccordionTitle
-            className = { ActiveAccordion == index ? "btn-primary" : "btn-outline-primary" }  
+            className = { ActiveAccordion == index ? "bg-sky-500  text-white" : "text-slate-600" }  
             handleClick={handleClick} clickedIndex={index}>
             {item.question}
 
-            <span className='icon'>{ ActiveAccordion == index ? "-" : "+" }</span>
+            <span className='text-2xl w-6 text-center'>{ ActiveAccordion == index ? "-" : "+" }</span>
             </AccordionTitle>
             {ActiveAccordion == index &&
               <AccordionBody AccDetail={item.answer} />

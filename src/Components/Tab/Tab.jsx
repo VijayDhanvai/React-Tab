@@ -10,29 +10,15 @@ function Tab() {
   }
   return (
     <>
-
-
       {Object.entries(TabDetail).map(([key, val], i) => (
-
-
-        <TabButton className={TabData == key ? "btn-primary" : "btn-outline-primary"}
+        <TabButton className={TabData == key ? "bg-sky-700" : "bg-sky-500"}
           handleClick={handleClick}>{val.title}
         </TabButton>
-
-
-      ))}
-
-      {/* <TabButton className={TabData == 'components' ? "btn-primary" : "btn-outline-primary"}
-
-        handleClick={handleClick}>Components</TabButton>
-      <TabButton className={TabData == 'jsx' ? "btn-primary" : "btn-outline-primary"} handleClick={handleClick}>JSX</TabButton>
-      <TabButton className={TabData == 'props' ? "btn-primary" : "btn-outline-primary"} handleClick={handleClick}>Props</TabButton>
-      <TabButton className={TabData == 'state' ? "btn-primary" : "btn-outline-primary"} handleClick={handleClick}>State</TabButton> */}
-
-      <div className=" mt-0  border  p-3">
-        <h2 className="text-primary">{TabDetail[TabData].title}</h2>
-        <p>{TabDetail[TabData].description}</p>
-        <div>
+      ))} 
+      <div className="shadow-xl p-3 border border-sky-50 rounded-lg rounded-t-none ">
+        <h2 className="text-sky-700 text-xl font-semibold my-3">{TabDetail[TabData].title}</h2>
+        <p className='text-slate-500'>{TabDetail[TabData].description}</p>
+        <div className='text-slate-800 rounded-lg bg-slate-100 mt-3 p-5 pt-0'>
           <pre>
             <code>{TabDetail[TabData].code}</code>
           </pre>

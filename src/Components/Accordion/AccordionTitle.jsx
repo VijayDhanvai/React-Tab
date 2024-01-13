@@ -4,7 +4,7 @@ function AccordionTitle(props) {
  
   return (
     <a
-      className={`${className} btn mt-2  d-flex justify-content-between `}
+      className={`${className} flex w-full items-center rounded-lg mt-5 justify-between cursor-pointer  border border-slate-200 px-3 py-2`}
       onClick={() => handleClick(clickedIndex)}
     >
       {children}
