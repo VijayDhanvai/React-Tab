@@ -1,29 +1,35 @@
 import ReactDOM from "react-dom";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 function Navbar() {
-    return (<nav className=" flex items-center justify-between ">
-        <Link className="  px-3 py-2 bg-sky-500 text-white  text-xl  font-title" href="/" > React & Tailwind  Ultimate Kit   </Link>
+  let activeMenuClass = ({ isActive }) =>
+    isActive ? "text-blue-600 px-2  underline" : "px-2";
 
+  return (
+    <nav className=" flex items-center justify-between ">
+      <NavLink
+        className="px-3 py-2 bg-sky-500 text-white  text-xl  font-title"
+        to="/"
+      >
+        React & Tailwind Ultimate Kit
+      </NavLink>
 
-        <div className=""  >
-            <ul className=" ">
+      <div className="">
+        <NavLink className={activeMenuClass} to="/">
+          Home
+        </NavLink>
 
-                <Link className="px-2" exact to="/">
-                    Home
-                </Link>
+        <NavLink className={activeMenuClass} to="/tab">
+          Tab
+        </NavLink>
 
-                <Link className="px-2" to="/tab">
-                    Tab
-                </Link>
-
-                <Link className="px-2" to="/accordiaon">
-                    Accordiaon
-                </Link>
-
-
-            </ul>
-
-        </div>
-    </nav>)
+        <NavLink className={activeMenuClass} to="/accordiaon">
+          Accordiaon
+        </NavLink>
+        <NavLink className={activeMenuClass} to="/catalogue">
+          Catalogue
+        </NavLink>
+      </div>
+    </nav>
+  );
 }
 export default Navbar;
