@@ -28,6 +28,9 @@ function Navbar() {
         <NavLink className={activeMenuClass} to="/catalogue">
           Catalogue
         </NavLink>
+        <NavLink className={activeMenuClass} to="/blog">
+          Blog
+        </NavLink>
       </div>
     </nav>
   );

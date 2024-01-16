@@ -29,7 +29,7 @@ function CatalogueItem(props) {
                 {cardItem.searchTern.map((searchTern, index) => (
                   <div
                     key={index}
-                    className="capitalize text-slate-500  bg-slate-100 text-sm  rounded-lg text-sm px-2 py-0.5 text-center    "
+                    className="capitalize text-slate-500  bg-slate-100 text-sm  rounded-lg  px-2 py-0.5 text-center    "
                   >
                     #{searchTern}
                   </div>

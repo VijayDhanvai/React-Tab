@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function FilterButtons(props) {
   const { FilterButtons, handleClick, className } = props;
   let btnClass =
